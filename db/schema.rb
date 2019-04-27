@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_26_004830) do
+ActiveRecord::Schema.define(version: 2019_04_27_003107) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 2019_04_26_004830) do
     t.text "comments"
     t.float "lat"
     t.float "long"
-    t.integer "distance"
+    t.float "distance"
     t.string "password"
     t.boolean "purchase"
     t.datetime "created_at", null: false

@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  resources :ratings
-  resources :toilets
-  resources :users
+
+  namespace :api do
+    namespace :v1 do
+      resources :ratings
+      resources :toilets
+      resources :users
+    end
+  end
 end
