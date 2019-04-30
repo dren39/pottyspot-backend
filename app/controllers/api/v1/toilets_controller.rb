@@ -29,7 +29,13 @@ class Api::V1::ToiletsController < ApplicationController
 
   def update
     @toilet = Toilet.find(params[:id])
-    @toilet.update(password: params[:password])
-    render json: @toilet
+    if params[:password]
+      @toilet.update(password: params[:password])
+      render json: @toilet
+    else
+      @toilet.update(purchase: params[:purchase])
+      render json: @toilet
+    end
+
   end
 end
