@@ -16,8 +16,13 @@ class Api::V1::ToiletsController < ApplicationController
   def create
     @toilets = []
     api_request.each do |toilet|
-      new_toilet = Toilet.find_or_create_by(api_id: toilet["id"], name: toilet["name"], street: toilet["street"], city: toilet["city"], state: toilet["state"], directions: toilet["directions"], comments: toilet["comment"], lat: toilet["latitude"], long: toilet["longitude"], distance: toilet["distance"])
-      @toilets << new_toilet
+      found_toilet = Toilet.find_by(api_id: toilet["id"])
+      if found_toilet
+        @toilets << found_toilet
+      else
+        new_toilet = Toilet.create(api_id: toilet["id"], name: toilet["name"], street: toilet["street"], city: toilet["city"], state: toilet["state"], directions: toilet["directions"], comments: toilet["comment"], lat: toilet["latitude"], long: toilet["longitude"], distance: toilet["distance"])
+        @toilets << new_toilet
+      end
     end
     render json: @toilets
   end
