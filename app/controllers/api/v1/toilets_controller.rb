@@ -21,4 +21,10 @@ class Api::V1::ToiletsController < ApplicationController
     end
     render json: @toilets
   end
+
+  def update
+    @toilet = Toilet.find(params[:id])
+    @toilet.update(password: params[:password])
+    render json: @toilet
+  end
 end
