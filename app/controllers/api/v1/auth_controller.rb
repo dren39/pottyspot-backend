@@ -1,5 +1,5 @@
 class Api::V1::AuthController < ApplicationController
-  skip_before_action :authorized, only: [:login, :get_user]
+  # skip_before_action :authorized, only: [:login, :get_user]
 
   def login
     # find user in the db whose username matches the username passed in params from the frontend

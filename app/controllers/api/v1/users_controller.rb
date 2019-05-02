@@ -1,5 +1,5 @@
 class Api::V1::UsersController < ApplicationController
-skip_before_action :authorized, only: [:create]
+# skip_before_action :authorized, only: [:create]
   def create
     # this is creating a user using the params passed in from the frontend
     @user = User.create(username:params[:user][:username], password:params[:user][:password])
