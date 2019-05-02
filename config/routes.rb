@@ -5,6 +5,8 @@ Rails.application.routes.draw do
       resources :ratings
       resources :toilets
       resources :users
+      post '/login', to: 'auth#login'
+      get '/get_user', to: 'auth#get_user'
     end
   end
 end

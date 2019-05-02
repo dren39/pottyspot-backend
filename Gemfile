@@ -32,6 +32,8 @@ gem 'active_model_serializers'
 
 gem "jwt", "~> 2.1"
 
+gem 'dotenv-rails', groups: [:development, :test]
+
 gem 'rest-client', '~> 2.0', '>= 2.0.2'
 
 group :development, :test do
