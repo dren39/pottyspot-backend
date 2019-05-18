@@ -1,24 +1,21 @@
-# README
+README
+PottySpot is a web app designed for users on the go to be able to find restrooms around them
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+PottySpot is built with a Rails backend using Ruby 2.6.1
 
-Things you may want to cover:
 
-* Ruby version
+Installation Instructions:
 
-* System dependencies
+Clone this repository to your local machine and go to the file in your terminal.
 
-* Configuration
+Run rake db:migrate
 
-* Database creation
+Run bundle install
 
-* Database initialization
+Run rails s to start Rails server
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+Licenses David Ren May 10, 2019
 
-* ...
+PottySpot is powered by REFUGE Restroom API https://www.refugerestrooms.org/api/docs/
