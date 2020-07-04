@@ -49,6 +49,5 @@ class Api::V1::ToiletsController < ApplicationController
       @toilet.update(purchase: params[:purchase])
       render json: @toilet
     end
-
   end
 end
