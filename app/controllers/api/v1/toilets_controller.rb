@@ -1,5 +1,11 @@
 class Api::V1::ToiletsController < ApplicationController
 # skip_before_action :authorized, only: [:index]
+
+    def welcome
+        toilets = []
+        render json: toilets
+    end
+    
   def index
     @toilets = Toilet.all
     render json: @toilets
