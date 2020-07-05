@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
+    root 'welcome#index'
     namespace :api do
      namespace :v1 do
-      root 'toilets#welcome'
       resources :ratings
       resources :toilets
       resources :users
