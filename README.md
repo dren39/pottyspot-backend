@@ -16,4 +16,6 @@ Run `rails s` to start the Rails server.
 
 You can check to see if the server is running by going to https://locahost:4000/ in your browser.
 
+A working demo of the app can be used [here](https://quiet-beyond-26673.herokuapp.com/).
+
 PottySpot is powered by [REFUGE Restroom API](https://www.refugerestrooms.org/api/docs/).
